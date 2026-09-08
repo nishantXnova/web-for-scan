@@ -347,8 +347,8 @@ code{font-family:"JetBrains Mono", ui-monospace, monospace; font-size:0.86em}
   .manifesto-visual svg g:first-child line:nth-child(2n){animation-delay:-0.9s}
   .manifesto-visual svg g:first-child line:nth-child(3n){animation-delay:-1.7s}
   @keyframes streak{from{transform:translateX(-8px)} to{transform:translateX(10px)}}
-  .eye-pupil{transform-origin:center; transform-box:fill-box; animation:look 5s ease-in-out infinite}
-  @keyframes look{0%,100%{transform:translateX(0)} 30%{transform:translateX(5px)} 60%{transform:translateX(-5px)}}
+  .eye-look{transform-box:fill-box; animation:look 5s ease-in-out infinite}
+  @keyframes look{0%,100%{transform:translateX(0)} 30%{transform:translateX(4px)} 60%{transform:translateX(-4px)}}
 }
 
 /* MOBILE PANEL */
