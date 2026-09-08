@@ -328,6 +328,29 @@ code{font-family:"JetBrains Mono", ui-monospace, monospace; font-size:0.86em}
 .footer-links a{font-weight:500; color:var(--ink-2)}
 .footer-links a:hover{color:var(--ink)}
 
+/* MANIFESTO — scan faster than your eye */
+.manifesto{background:#fff; color:#0A0A0B; border-top:1px solid var(--line); overflow:hidden}
+.manifesto-inner{max-width:1180px; margin:0 auto; padding:64px 24px 8px; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr); gap:24px; align-items:center}
+.manifesto-type{display:flex; flex-direction:column; line-height:0.92; min-width:0}
+.manifesto-line{font-family:"Anton", "Instrument Sans", sans-serif; font-size:clamp(56px, 9vw, 118px); letter-spacing:-0.01em; white-space:nowrap}
+.manifesto-line.thin{font-family:"Instrument Sans", sans-serif; font-weight:400; font-size:clamp(22px, 3.4vw, 44px); letter-spacing:0.06em; margin:10px 0}
+.manifesto-line.eye-line{display:flex; align-items:center; gap:0.02em}
+.manifesto-eye{display:inline-flex; width:1.42em; height:0.76em; margin:0 0.02em; color:#0A0A0B}
+.manifesto-eye svg{width:100%; height:100%}
+.manifesto-visual{min-width:0; color:#0A0A0B}
+.manifesto-visual svg{width:100%; height:auto; display:block}
+.manifesto-foot{max-width:1180px; margin:0 auto; padding:18px 24px 40px; display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+.manifesto-foot a{display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:13px; background:var(--ink); color:#fff; padding:9px 15px; border-radius:999px}
+.manifesto-foot a:hover{background:#1A1A1E}
+@media (prefers-reduced-motion: no-preference){
+  .manifesto-visual svg g:first-child line{animation:streak 2.6s ease-in-out infinite alternate}
+  .manifesto-visual svg g:first-child line:nth-child(2n){animation-delay:-0.9s}
+  .manifesto-visual svg g:first-child line:nth-child(3n){animation-delay:-1.7s}
+  @keyframes streak{from{transform:translateX(-8px)} to{transform:translateX(10px)}}
+  .eye-pupil{transform-origin:center; transform-box:fill-box; animation:look 5s ease-in-out infinite}
+  @keyframes look{0%,100%{transform:translateX(0)} 30%{transform:translateX(5px)} 60%{transform:translateX(-5px)}}
+}
+
 /* MOBILE PANEL */
 [hidden]{display:none !important}
 .mobile-backdrop{position:fixed; inset:0; background:rgba(10,10,11,0.32); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); z-index:55}
@@ -389,6 +412,10 @@ code{font-family:"JetBrains Mono", ui-monospace, monospace; font-size:0.86em}
   .bento-card, .bench-card{min-width:0; overflow:hidden}
   .float-list{min-width:0}
   .float-list span{min-width:0}
+  .manifesto-inner{grid-template-columns:minmax(0,1fr); padding:40px 16px 4px; gap:8px}
+  .manifesto-line{font-size:clamp(52px, 17vw, 84px)}
+  .manifesto-line.thin{font-size:clamp(19px, 5.4vw, 26px)}
+  .manifesto-foot{padding:14px 16px 32px}
   .bento{grid-template-columns:minmax(0,1fr); gap:12px}
   .bento-card{padding:16px; border-radius:16px}
   .bento-card.span-8, .bento-card.span-4{grid-column:span 1}
